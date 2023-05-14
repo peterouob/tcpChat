@@ -61,9 +61,15 @@ while True:
             print("error")
             print("==============================")
     elif chose == 2:
-        c.execute("INSERT INTO user (name,password) VALUES ('peter','12345')")
+        print("enter your name")
+        uname = input()
+        print("enter your password")
+        upassword = input()
+        param = (uname,upassword)
+        c.execute("INSERT INTO user VALUES (NULL,?,?)",param)
         conn.commit()
         print("success insert")
+        print("==============================")
         conn.close()
     else:
         print("have wrong")
