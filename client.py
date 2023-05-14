@@ -3,7 +3,7 @@ import sqlite3
 
 conn = sqlite3.connect("tcpDB.db")
 c = conn.cursor()
-print("数据库打开成功")
+print("connect success")
 
 # c.execute('''CREATE TABLE user
 #        (
